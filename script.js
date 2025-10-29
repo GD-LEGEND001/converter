@@ -118,8 +118,17 @@ function equal(){
      const prize = document.createElement("div")
      prize.className = "bg-[#ffffff] h-50 w-50 rounded-xl block mx-auto mt-3 hover:bg-[url('images/prize.webp')]"
      document.body.appendChild(prize)
+     const redirectBtn = document.createElement("button")
+     redirectBtn.textContent = "CONTINUE"
+     redirectBtn.className = "bg-[#ffffff] w-40 h-10 text-green-600 font-bold rounded-4xl block mx-auto mt-9"
+     document.body.appendChild(redirectBtn)
+     redirectBtn.onclick = function(){
+          window.location.href = "money.html"
+     }
 
    }
+
+   
 
 }
      
@@ -154,4 +163,18 @@ deleteBtn.onclick = function(){
   }
 }
 
+const muster = document.querySelectorAll(".muster");
+
+function redirect() {
+  
+  for (let input of muster) {
+    if (input.value.trim() === "") {
+      alert("Please fill all parts of this form");
+      return; 
+    }
+  }
+
+  
+  window.location.href = "abuse.html";
+}
 
