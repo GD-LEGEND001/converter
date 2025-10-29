@@ -82,11 +82,28 @@
       animation: glow 2s ease-in-out infinite;
     }
 
-    /* === Responsive Layout === */
+    /* === Desktop Defaults === */
+    .calculator {
+      width: 500px;
+      height: 600px;
+      padding: 20px;
+    }
+
+    button {
+      width: 100px;
+      height: 80px;
+      font-size: 1.2rem;
+    }
+
+    .display {
+      font-size: 2rem;
+    }
+
+    /* === Responsive Layout for Phones === */
     @media (max-width: 640px) {
       body {
-        background-size: cover;
         padding: 10px;
+        background-size: cover;
       }
 
       p.text-6xl {
@@ -94,27 +111,26 @@
       }
 
       .calculator {
-        width: 100% !important;
+        width: 100%;
         max-width: 380px;
-        height: auto !important;
+        height: auto;
         padding: 15px;
-        margin-top: 20px;
       }
 
       .display {
-        font-size: 1.4rem !important;
+        font-size: 1.4rem;
         padding: 10px;
         height: 60px;
       }
 
       button {
-        width: 70px !important;
-        height: 60px !important;
-        font-size: 1rem !important;
+        width: 80px;
+        height: 65px;
+        font-size: 1rem;
       }
 
       .buttons {
-        gap: 10px !important;
+        gap: 8px;
       }
     }
 
@@ -124,12 +140,12 @@
       }
 
       button {
-        width: 60px !important;
-        height: 55px !important;
+        width: 70px;
+        height: 55px;
       }
 
       p.text-6xl {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
     }
   </style>
@@ -138,45 +154,44 @@
 <body class="bg-[url('images/mathematics-theme.jpg')] font-family-[roboto_mono] flex flex-col items-center">
   <p class="text-6xl text-center font-bold text-[#ffffff] animate-fade-in">Calculator</p>
 
-  <div class="calculator bg-[#ffffff] w-130 h-160 mt-10 mb-10 p-4 rounded-4xl shadow-lg animate-slide-up">
+  <div class="calculator bg-[#ffffff] mt-10 mb-10 p-4 rounded-4xl shadow-lg animate-slide-up">
     <div class="flex justify-center">
-      <div class="display w-120 text-right bg-gray-800 text-white text-3xl p-4 rounded-lg mt-5 mb-10 h-15 overflow-x-auto whitespace-nowrap">
+      <div class="display w-full text-right bg-gray-800 text-white p-4 rounded-lg mt-5 mb-10 h-15 overflow-x-auto whitespace-nowrap">
         <p id="input"></p>
       </div>
     </div>
 
     <!-- Buttons -->
     <div class="buttons flex flex-col gap-4">
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-wrap">
         <button onclick="nose()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">7</button>
         <button onclick="noei()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">8</button>
         <button onclick="noni()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">9</button>
         <button onclick="rem()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">AC</button>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-wrap">
         <button onclick="nofo()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">4</button>
         <button onclick="nofi()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">5</button>
         <button onclick="nosi()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">6</button>
         <button onclick="divide()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">➗</button>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-wrap">
         <button onclick="noon()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">1</button>
         <button onclick="notw()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">2</button>
         <button onclick="noth()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">3</button>
         <button onclick="multiply()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">✖</button>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-wrap">
         <button onclick="noze()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">0</button>
         <button onclick="decimal()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">.</button>
         <button onclick="square()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">^</button>
         <button onclick="add()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">+</button>
       </div>
 
-      <div class="flex justify-between">
-        <button onclick="exponential()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold"></button>
+      <div class="flex justify-between flex-wrap">
         <button onclick="del()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">DEL</button>
         <button onclick="equal()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">=</button>
         <button onclick="subtract()" class="bg-[#000000] rounded-4xl text-[#ffffff] font-bold">-</button>
