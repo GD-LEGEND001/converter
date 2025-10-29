@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link rel="icon" type="image/png" href="images/s.png">
+ 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Online calculator</title>
   <style>
+    
     @font-face {
       font-family: "roboto_mono";
       src: url(fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
@@ -80,7 +82,13 @@
     .animate-glow {
       animation: glow 2s ease-in-out infinite;
     }
-  </style>
+    
+@media (max-width: 400px) {
+  .calculator {
+    transform: scale(0.9);
+  }
+}
+
   </style>
   <link rel="manifest" href="manifest.json">
 </head>
